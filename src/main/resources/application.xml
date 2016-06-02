@@ -2,8 +2,22 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-        <bean id="people" class="com.tongji.Springtest.people">
+        <bean id="people" class="com.tongji.Springtest.People">
             <property name="name" value="zyy"></property>
+        </bean>
+        <bean id="intereptor" class="com.tongji.Springtest.myintereptor">
+        </bean>
+        <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+            <property name="interceptorNames">
+                <list>
+                    <value>intereptor</value>
+                </list>
+            </property>
+            <property name="beanNames">
+                <list>
+                    <value>people</value>
+                </list>
+            </property>
         </bean>
 
 </beans>

@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class test {
     public static void main(String[] args) {
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("application.xml");
-        people people=applicationContext.getBean("people", com.tongji.Springtest.people.class);
-        System.out.println(people.getName());
+        People people=applicationContext.getBean("people", com.tongji.Springtest.People.class);
+        people.getName();
     }
 }

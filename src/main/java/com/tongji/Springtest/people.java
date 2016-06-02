@@ -3,8 +3,9 @@ package com.tongji.Springtest;
 /**
  * Created by wb-cengyanyu on 2016/6/2.
  */
-public class people {
+public class People {
     public String getName() {
+        System.out.println(name);
         return name;
     }
 
